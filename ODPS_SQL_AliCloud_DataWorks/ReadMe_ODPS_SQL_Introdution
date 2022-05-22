@@ -1,0 +1,57 @@
+ODPS
+Open Data Processing Service
+由阿里云自主研发，提供针对TB/PB级数据、实时性要求不高的分布式处理能力，应用于数据分析、挖掘、商业智能等领域；阿里巴巴的离线数据业务都运行在ODPS上。
+
+ODPS SQL：与Hive SQL语法基本一致；
+适用于海量数据(TB级别)，实时性要求不高的场合，它的每个作业的准备，提交等阶段要花费较长时间，因此要求每秒处理几千至数万笔事务的业务是不能用ODPS SQL完成的；
+ODPS SQL采用的是类似于SQL的语法，可以看作是标准SQL的子集，但不能因此简单的把ODPS SQL等价成一个数据库，它在很多方面并不具备数据库的特征。
+
+SQL语言包括四种主要程序设计语言类别的语句：数据定义语言（DDL），数据操作语言（DML）,数据控制语言（DCL）和事务控制语言（TCL）；
+在ODPS中使用的主要是DDL跟DML。
+
+
+SQL四种语言：DDL,DML,DCL,TCL
+
+1.DDL（Data Definition Language）
+数据库定义语言statements are used to define the database structure or schema.
+DDL是SQL语言的四大功能之一。
+用于定义数据库的三级结构，包括外模式、概念模式、内模式及其相互之间的映像，定义数据的完整性、安全控制等约束
+DDL不需要commit.
+- CREATE
+- ALTER
+- DROP
+- TRUNCATE
+- COMMENT
+- RENAME
+
+2.DML（Data Manipulation Language）数据操纵语言statements are used for managing data within schema objects.
+由DBMS提供，用于让用户或程序员使用，实现对数据库中数据的操作。
+DML分成交互型DML和嵌入型DML两类。
+依据语言的级别，DML又可分成过程性DML和非过程性DML两种。
+需要commit.
+- SELECT
+- INSERT
+- UPDATE
+- DELETE
+- MERGE
+- CALL
+- EXPLAIN PLAN
+- LOCK TABLE
+
+3.DCL（Data Control Language）数据库控制语言  
+授权，角色控制等
+- GRANT 授权
+- REVOKE 取消授权
+
+4.TCL（Transaction Control Language）事务控制语言
+- SAVEPOINT 设置保存点
+- ROLLBACK  回滚
+- SET TRANSACTION
+
+SQL主要分成四部分：
+（1）数据定义。（SQL DDL）用于定义SQL模式、基本表、视图和索引的创建和撤消操作。
+（2）数据操纵。（SQL DML）数据操纵分成数据查询和数据更新两类。数据更新又分成插入、删除、和修改三种操作。
+（3）数据控制。包括对基本表和视图的授权，完整性规则的描述，事务控制等内容。
+（4）嵌入式SQL的使用规定。涉及到SQL语句嵌入在宿主语言程序中使用的规则。
+
+ 
